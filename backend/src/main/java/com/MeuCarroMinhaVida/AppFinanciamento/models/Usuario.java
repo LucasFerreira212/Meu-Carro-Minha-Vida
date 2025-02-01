@@ -1,13 +1,9 @@
 package com.MeuCarroMinhaVida.AppFinanciamento.models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "usuarios")
-@Getter
-@Setter
 public class Usuario {
 
 	@Id
@@ -19,4 +15,28 @@ public class Usuario {
 
 	@Column(nullable = false)
 	private String senha;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }
